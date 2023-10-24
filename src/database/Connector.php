@@ -5,13 +5,12 @@ namespace src\database;
 use mysqli;
 use RuntimeException;
 
-include_once("Connector.php");
-
 class Connector
 {
+    private static ?Connector $instance = null;
     private $connection;
 
-    public function __construct()
+    private function __construct()
     {
         $configuration = Configuration::getInstance();
 
@@ -25,6 +24,15 @@ class Connector
         if ($this->connection->connect_errno) {
             throw new RuntimeException('mysqli connection error: ' . $this->connection->connect_error);
         }
+    }
+
+    public static function getInstance(): ?Connector
+    {
+        if (Connector::$instance === null) {
+            Connector::$instance = new Connector();
+        }
+
+        return Connector::$instance;
     }
 
     public function query(string $query)
