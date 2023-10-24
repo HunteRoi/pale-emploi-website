@@ -18,7 +18,23 @@
             $db = Connector::getInstance();
 
             $result = $db->query("SELECT * FROM Candidat");
-            echo implode(', ', $result->fetch_all());
+            echo implode(
+                    ', ',
+                    array_map(
+                            function ($row) {
+                                return implode(
+                                        ', ',
+                                        array_map(
+                                                function ($value) {
+                                                    return $value;
+                                                },
+                                                $row
+                                        )
+                                );
+                            },
+                            $result->fetch_all()
+                    )
+            );
         ?>
     </body>
 </html>
