@@ -3,6 +3,7 @@
 namespace src\database;
 
 use mysqli;
+use RuntimeException;
 
 include_once("Connector.php");
 
@@ -19,9 +20,10 @@ class Connector
             $configuration->db_user,
             $configuration->db_password,
             $configuration->db_database
-        ) or die("Connect failed: %s\n" . $this->connection->error);
-        if ($this->connection->connect_error) {
-            die("Connection failed: " . $this->connection->connect_error);
+        );
+
+        if ($this->connection->connect_errno) {
+            throw new RuntimeException('mysqli connection error: ' . $this->connection->connect_error);
         }
     }
 }
