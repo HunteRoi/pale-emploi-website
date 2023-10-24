@@ -26,4 +26,14 @@ class Connector
             throw new RuntimeException('mysqli connection error: ' . $this->connection->connect_error);
         }
     }
+
+    public function query(string $query)
+    {
+        return $this->connection->query($query);
+    }
+
+    public function close()
+    {
+        $this->connection->close();
+    }
 }
