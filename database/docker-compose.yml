@@ -1,9 +1,5 @@
 version: "3.8"
 
-networks:
-  mysql-network:
-    driver: bridge
-
 volumes:
   mysql:
 
@@ -12,12 +8,8 @@ services:
   database:
     image: mariadb:latest
     env_file: ./.env
-    environment:
-      - MYSQL_DATABASE=pale_emploi
     ports:
       - "${MYSQL_PORT}:3306"
-    networks:
-      - mysql-network
     restart: always
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]

@@ -9,32 +9,58 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Test</title>
+        <title>Pâle Emploi</title>
     </head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
     <body>
-        <?php
-            use src\database\Connector;
+        <table>
+            <tr>
+                <th>id</th>
+                <th>nom</th>
+                <th>prénom</th>
+                <th>email</th>
+                <th>mot de passe</th>
+            </tr>
+            <tr>
+                <td>
+                    <?php
+                    use src\database\Connector;
 
-            $db = Connector::getInstance();
+                    $db = Connector::getInstance();
 
-            $result = $db->query("SELECT * FROM Candidat");
-            echo implode(
-                    ', ',
-                    array_map(
+                    $result = $db->query("SELECT * FROM Candidat");
+                    echo implode(
+                        '</td></tr><tr>',
+                        array_map(
                             function ($row) {
                                 return implode(
-                                        ', ',
-                                        array_map(
-                                                function ($value) {
-                                                    return $value;
-                                                },
-                                                $row
-                                        )
+                                    '</td><td>',
+                                    array_map(
+                                        function ($value) {
+                                            return $value;
+                                        },
+                                        $row
+                                    )
                                 );
                             },
                             $result->fetch_all()
-                    )
-            );
-        ?>
+                        )
+                    );
+                    ?>
+                </td>
+            </tr>
+        </table>
     </body>
 </html>

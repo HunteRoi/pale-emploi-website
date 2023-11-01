@@ -2,7 +2,7 @@
 
 namespace src\database;
 
-use src\exceptions\UnknownPropertyException;
+use src\database\exceptions\UnknownPropertyException;
 
 class Configuration
 {
@@ -29,8 +29,8 @@ class Configuration
     function __get(string $name)
     {
         return match ($name) {
-            'db_host', 'db_user', 'db_password', 'db_name', 'db_port', 'db_database' => $this->config[$name],
-            default => throw new UnknownPropertyException(),
+            'db_host', 'db_user', 'db_password', 'db_name', 'db_port' => $this->config[$name],
+            default => throw new UnknownPropertyException($name),
         };
     }
 }
