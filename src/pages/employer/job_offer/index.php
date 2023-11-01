@@ -1,0 +1,3 @@
+<?php
+
+## AFFICHE LES OFFRES D'EMPLOI ET AUSSI GERE L'AFFICHAGE D'UNE SEULE OFFRE D'EMPLOI (identifiant en query param)

@@ -1,0 +1,3 @@
+<?php
+
+## AFFICHE LA PAGE DE LOGOUT
