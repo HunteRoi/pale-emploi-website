@@ -18,7 +18,8 @@ class Connector
             $configuration->db_host,
             $configuration->db_user,
             $configuration->db_password,
-            $configuration->db_name
+            $configuration->db_name,
+            $configuration->db_port
         );
 
         if ($this->connection->connect_errno) {
