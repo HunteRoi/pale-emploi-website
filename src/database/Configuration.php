@@ -6,12 +6,12 @@ use src\database\exceptions\UnknownPropertyException;
 
 class Configuration
 {
-    private readonly array $config;
     private static ?Configuration $instance = null;
+    private readonly array $config;
 
     private function __construct()
     {
-        $this->config = parse_ini_file('../config.ini') or die("Unable to read configuration file");
+        $this->config = parse_ini_file('../../config.ini') or die("Unable to read configuration file");
     }
 
     public static function getInstance(): ?Configuration

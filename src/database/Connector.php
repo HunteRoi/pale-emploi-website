@@ -3,6 +3,7 @@
 namespace src\database;
 
 use mysqli;
+use mysqli_stmt;
 use RuntimeException;
 
 class Connector
@@ -34,6 +35,11 @@ class Connector
         }
 
         return Connector::$instance;
+    }
+
+    public function createStatement(string $query): mysqli_stmt
+    {
+        return new mysqli_stmt($this->connection, $query);
     }
 
     public function query(string $query)
