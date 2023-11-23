@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (!$result) {
                 $error = 'Une erreur est survenue lors de l\'enregistrement !';
             } else {
-                header('Location: login.php');
+                header('Location: /pages/login.php');
             }
         } else {
             $error = 'Les mots de passe ne correspondent pas !';
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <h1>Inscription</h1>
 
 <p>Vous n'avez pas encore de compte ? Inscrivez-vous dès maintenant !</p>
-<p>Si vous avez déjà un compte, <a href="/login">connectez-vous</a>.</p>
+<p>Si vous avez déjà un compte, <a href="/pages/login.php">connectez-vous</a>.</p>
 
 <div>
     <form method="post">

@@ -30,8 +30,8 @@
                 <th>id</th>
                 <th>nom</th>
                 <th>prénom</th>
-                <th>email</th>
                 <th>mot de passe</th>
+                <th>email</th>
             </tr>
             <tr>
                 <td>
@@ -40,7 +40,7 @@
 
                     $db = Connector::getInstance();
 
-                    $result = $db->query("SELECT * FROM Candidat");
+                    $result = $db->query("SELECT * FROM personne");
                     echo implode(
                         '</td></tr><tr>',
                         array_map(
