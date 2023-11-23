@@ -1,0 +1,195 @@
+body a{
+    text-decoration: none;
+}
+
+main {
+    margin-bottom: 6rem;
+    max-width: 600 !important;
+}
+main > div {
+    display: flex;
+    box-sizing: border-box;
+    margin-block: 0;
+    margin-inline: 0;
+    min-inline-size: 0;
+    flex-direction: column;
+    width: 602px;
+    max-width: 100%;
+    flex: 1 1 auto;
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.css-1773tqo {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(212, 210, 208);
+    border-radius: 0.5rem;
+    display: block;
+    overflow: hidden;
+    white-space: normal;
+    position: relative;
+    padding: 16px;
+}
+.css-1kbtny3 {
+    display: flex;
+    box-sizing: border-box;
+    margin-block: 0;
+    margin-inline: 0;
+    min-inline-size: 0;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    -moz-box-align: center;
+    align-items: center;
+    border: medium;
+}
+.css-1e9y1g {
+    display: flex;
+    box-sizing: border-box;
+    margin-block: 0;
+    margin-inline: 0;
+    min-inline-size: 0;
+    -moz-box-align: center;
+    align-items: center;
+    max-width: 100%;
+}
+.css-1epf9yb {
+    box-sizing: border-box;
+    margin-block: 0;
+    margin-inline: 0;
+    min-inline-size: 0;
+    width: 3rem;
+    min-width: 3rem;
+    margin-right: 0.75rem;
+}
+.css-4rov4i {
+    box-sizing: border-box;
+    margin-block: 0;
+    margin-inline: 0;
+    min-inline-size: 0;
+    color: rgb(45, 45, 45);
+}
+.css-smaipe {
+    font-weight: inherit;
+    color: rgb(89, 89, 89);
+    font-size: inherit;
+    line-height: inherit;
+}
+.css-34k6dz {
+    font-family: "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Liberation Sans", "Roboto", "Noto", sans-serif;
+    font-weight: inherit;
+    color: rgb(89, 89, 89);
+    font-size: inherit;
+    line-height: inherit;
+    flex-flow: row;
+    -moz-box-pack: start;
+    justify-content: flex-start;
+    display: flex;
+}
+.css-34k6dz span {
+    color: rgb(45, 45, 45);
+    font-weight: 600;
+}
+.css-nihwn3 {
+    font-family: "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Liberation Sans", "Roboto", "Noto", sans-serif;
+    font-weight: inherit;
+    color: rgb(89, 89, 89);
+    font-size: inherit;
+    line-height: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
+}
+.css-nab397 {
+    font-family: "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Liberation Sans", "Roboto", "Noto", sans-serif;
+    font-weight: inherit;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: rgb(118, 118, 118);
+}
+.css-hmfc7m {
+    box-sizing: border-box;
+    background: transparent;
+    appearance: none;
+    text-align: start;
+    text-decoration: none;
+    border: medium;
+    cursor: pointer;
+    user-select: none;
+    -moz-box-align: center;
+    align-items: center;
+    -moz-box-pack: center;
+    justify-content: center;
+    position: relative;
+    margin-block: 0;
+    margin-inline: 0;
+    line-height: 1.5;
+    font-family: "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Liberation Sans", "Roboto", "Noto", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s, z-index 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    display: inline-flex;
+    inline-size: auto;
+    padding-block: 0.5625rem;
+    min-block-size: 2.75rem;
+    box-shadow: none;
+    color: rgb(45, 45, 45);
+    padding-inline: 0.5625rem;
+    min-inline-size: 2.75rem;
+}
+
+.sect2-title {
+    margin-block: 0 0.5rem;
+    margin-inline: 0;
+    color: rgb(45, 45, 45);
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+.css-es7v8c {
+    text-decoration: none !important;
+    display: block;
+    background-color: white;
+    border: 1px solid rgb(212, 210, 208);
+    border-radius: 5px;
+    padding: 5px 14px;
+    margin-bottom: 1rem;
+}
+.css-ra8ckx {
+    display: flex;
+    box-sizing: border-box;
+    margin-block: 0;
+    margin-inline: 0;
+    min-inline-size: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    -moz-box-align: center;
+    align-items: center;
+}
+.css-1waj6v4 {
+    box-sizing: border-box;
+    margin-block: 0;
+    margin-inline: 0;
+    min-inline-size: 0;
+    flex: 1 1 0%;
+    padding-right: 1rem;
+}
+.css-tixvpt {
+    margin-block: 0 0.5rem;
+    margin-inline: 0;
+    color: rgb(45, 45, 45);
+    font-weight: 700;
+    font-family: "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Liberation Sans", "Roboto", "Noto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.25rem;
+}
+.css-jcj5hu {
+    font-family: "Noto Sans", "Helvetica Neue", "Helvetica", "Arial", "Liberation Sans", "Roboto", "Noto", sans-serif;
+    font-weight: inherit;
+    color: rgb(118, 118, 118);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}

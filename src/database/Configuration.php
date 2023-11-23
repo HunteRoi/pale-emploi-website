@@ -11,7 +11,7 @@ class Configuration
 
     private function __construct()
     {
-        $this->config = parse_ini_file('../../config.ini') or die("Unable to read configuration file");
+       $this->config = parse_ini_file('../../config.ini') or die("Unable to read configuration file");
     }
 
     public static function getInstance(): ?Configuration
