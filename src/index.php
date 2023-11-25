@@ -40,7 +40,7 @@
 
                     $db = Connector::getInstance();
 
-                    $result = $db->query("SELECT * FROM personne");
+                    $result = $db->query("SELECT * FROM offre_emploi");
                     echo implode(
                         '</td></tr><tr>',
                         array_map(

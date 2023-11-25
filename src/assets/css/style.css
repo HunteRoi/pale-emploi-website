@@ -1,0 +1,87 @@
+body {
+    --body-color: #eef1f4;
+    --title-color: #37609e;
+    --footer-bgcolor: #132e67;
+    --ombre: 3px 5px 18px #aca3a3;
+    --red: #e22227;
+    background-color: var(--body-color);
+    margin: 0 auto; /* Élimine les marges existantes aux bords de la page.*/
+    font-family: Arial Black,Tahoma, Verdana, sans-serif;
+}
+body a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-bottom: 25px;
+}
+
+.navigationPc {
+    display: flex;
+    padding-top: 40px;
+}
+
+.navigationPc ul {
+    display: flex;
+    gap: 2px;
+    color: var(--footer-bgcolor);
+}
+
+.navigationPc ul li {
+    margin-right: 28px;
+}
+
+.navigationPc ul li a, .navbar-light .navbar-nav .nav-link {
+    color: var(--footer-bgcolor);
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: var(--footer-bgcolor) !important;
+}
+  
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+/* Styles footer */
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: auto;
+    justify-content: space-around;
+    background-color: var(--footer-bgcolor);
+}
+footer li span {
+    color: var(--red);
+}
+footer li a {
+    color: var(--body-color);
+    text-decoration: none !important;
+}
+footer div {
+    margin-left: 32px;
+    width: inherit;
+}
+footer h4 {
+    font-size: 20px;
+    font-family: Arial Black, serif;
+    color: var(--title-color);
+    margin-bottom: 25px;
+}
+footer div ul {
+    margin-top: -15px;
+}
+footer div li {
+    list-style: none;
+    margin: 10px 0 0 -32px;
+    font-size: 16px;
+}

@@ -1,0 +1,148 @@
+body>#main-offres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 15rem;
+}
+
+#main-offres>h2 {
+  font-size: 55px;
+}
+
+.blocHomeAnnonce {
+  margin-top: 5rem;
+  gap: 1rem;
+}
+
+.bloc-textes {
+  color: black;
+  margin-left: 15px;
+}
+
+.bloc-textes>h3 {
+  font-size: 30px;
+}
+
+.bloc-textes p {
+  font-size: 20px;
+}
+
+.annonce h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--title-color);
+}
+
+.bloc-textes p {
+  font-size: 15px;
+  margin-top: -2px;
+}
+
+.blocHomeAnnonce a {
+  box-shadow: var(--ombre);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 6px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 45px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.blocHomeAnnonce a:hover {
+  transform: translateY(-0.5rem) scale(1.0125);
+  box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+#blocHomeTextUser {
+  background-color: var(--title-color);
+  padding: 34px 0 42px;
+  display: flex;
+}
+
+#blocHomeTextUser .texteBienvenu > span {
+  font-size: 64px;
+  color: var(--footer-bgcolor);
+  transform: rotate(-38deg);
+  display: inline-block;
+  padding-top: 68px;
+  margin-right: 43px;
+}
+
+#blocHomeTextUser .hand-icon {
+  font-size: 64px;
+  color: var(--footer-bgcolor);
+  transform: rotate(-38deg);
+  display: inline-block;
+  margin-right: 43px;
+}
+
+#blocHomeTextUser>.texteBienvenu {
+  align-self: flex-start;
+  margin-left: 69px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#blocHomeTextUser>div>span {
+  font-size: 84px;
+  transform: rotate(-38deg);
+  display: inline-block;
+  padding-top: 68px;
+  margin-right: 43px;
+}
+
+#blocHomeTextUser h4 {
+  font-size: 35px;
+  color: white;
+}
+
+#blocHomeTextUser .blocBtn {
+  display: flex;
+  justify-content: space-around;
+  align-self: end;
+  position: relative;
+  bottom: 113px;
+  right: 69px;
+  gap: 1rem;
+}
+
+#btnUpdateInfos {
+  height: 42px;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#btnUpdateInfos:hover {
+  color: var(--footer-bgcolor);
+}
+
+#btnShowProfile {
+  height: 53px;
+  font-size: 25px;
+  background-color: #eef1f4;
+  color: black;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#btnShowProfile:hover {
+  color: #fff;
+  background-color: var(--footer-bgcolor);
+}
+
+#main-offres {
+  margin-top: 5rem;
+}
+
+/* Styles profil page */
+
