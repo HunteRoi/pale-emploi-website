@@ -1,6 +1,6 @@
 <?php
 
-namespace src\database;
+namespace Database;
 
 use mysqli;
 use mysqli_stmt;
@@ -24,11 +24,11 @@ class Connector
         );
 
         if ($this->connection->connect_errno) {
-            throw new RuntimeException('mysqli connection error: ' . $this->connection->connect_error);
+            throw new RuntimeException("Erreur de connexion mysqli: " . $this->connection->connect_error);
         }
     }
 
-    public static function getInstance(): ?Connector
+    public static function getInstance(): Connector
     {
         if (Connector::$instance === null) {
             Connector::$instance = new Connector();

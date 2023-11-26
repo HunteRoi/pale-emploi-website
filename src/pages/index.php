@@ -1,3 +1,0 @@
-<?php
-
-## AFFICHE LA PAGE D'ACCUEIL

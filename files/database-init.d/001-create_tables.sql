@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS offre_emploi
 (
     id               INT AUTO_INCREMENT,
     titre            VARCHAR(50) NOT NULL,
-    description      VARCHAR(50),
+    description      VARCHAR(500),
     ville            VARCHAR(50),
     date_publication DATE,
     employeur_id     INT         NOT NULL,

@@ -1,3 +1,0 @@
-<?php
-
-## MENU EN TANT QU'EMPLOYEUR

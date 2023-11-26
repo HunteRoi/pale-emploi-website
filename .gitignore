@@ -1,3 +1,6 @@
 **/.env
-config.ini
+**/config.ini
+
+# IDE
 .idea/**
+.vscode/

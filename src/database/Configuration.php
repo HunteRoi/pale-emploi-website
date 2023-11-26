@@ -1,8 +1,7 @@
 <?php
 
-namespace src\database;
-
-use src\database\exceptions\UnknownPropertyException;
+namespace Database;
+use Database\Exceptions\UnknownPropertyException;
 
 class Configuration
 {
@@ -11,7 +10,7 @@ class Configuration
 
     private function __construct()
     {
-       $this->config = parse_ini_file('../../config.ini') or die("Unable to read configuration file");
+       $this->config = parse_ini_file("./config.ini") or die("Unable to read configuration file");
     }
 
     public static function getInstance(): ?Configuration
@@ -29,7 +28,7 @@ class Configuration
     function __get(string $name)
     {
         return match ($name) {
-            'db_host', 'db_user', 'db_password', 'db_name', 'db_port' => $this->config[$name],
+            "db_host", "db_user", "db_password", "db_name", "db_port" => $this->config[$name],
             default => throw new UnknownPropertyException($name),
         };
     }

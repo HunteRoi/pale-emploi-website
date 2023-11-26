@@ -1,15 +1,17 @@
 <?php
 
-use src\database\exceptions\UnknownPropertyException;
+namespace Classes;
 
 class Person
 {
-    private $last_name;
-    private $first_name;
-    private $email;
-    private $password;
+    use Common\Entity;
+    
+    private string $last_name;
+    private string $first_name;
+    private string $email;
+    private string $password;
 
-    public function __construct($last_name = null, $first_name = null, $email = null, $password = null)
+    public function __construct($last_name, $first_name, $email, $password)
     {
         $this->last_name = $last_name;
         $this->first_name = $first_name;
@@ -17,20 +19,8 @@ class Person
         $this->password = $password;
     }
 
-    /**
-     * @throws UnknownPropertyException
-     */
-    public function __get($property)
-    {
-        if (property_exists($this, $property)) {
-            return $this->$property;
-        } else {
-            throw new UnknownPropertyException($property);
-        }
-    }
-
     public function __toString()
     {
-        return $this->last_name . ' ' . $this->first_name;
+        return $this->first_name . " " . mb_strtoupper($this->last_name);
     }
 }

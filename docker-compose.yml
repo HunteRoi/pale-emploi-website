@@ -3,9 +3,12 @@ version: "3.8"
 volumes:
   mysql:
 
+networks:
+  psi:
 
 services:
   database:
+    container_name: database
     image: mariadb:latest
     env_file: ./.env
     ports:
@@ -16,4 +19,20 @@ services:
     command: --default-authentication-plugin=caching_sha2_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     volumes:
       - mysql:/var/lib/mysql
-      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./files/database-init.d:/docker-entrypoint-initdb.d
+    networks:
+      - psi
+
+  website:
+    container_name: website
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "${APACHE_PORT}:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - psi
+    depends_on:
+      - database

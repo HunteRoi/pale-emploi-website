@@ -1,27 +1,19 @@
 <?php
 
-    include_once "../autoload.php";
+namespace Classes;
 
-    use src\database\Connector;
+class Employee extends Person
+{
+    private string|null $company;
 
-    class Employee
+    public function __construct($last_name, $first_name, $email, $password, $company)
     {
-        /**
-         * @param $email
-         * @return array
-         */
-        public static function showEmployeeInfos($email): array
-        {
-            $db = Connector::getInstance();
-
-            $result = $db->query("
-                SELECT *
-                FROM personne as p
-                WHERE p.email = '$email' AND p.entreprise IS NULL;
-            ");
-
-            return $result->fetch_all();
-        }
-
+        parent::__construct($last_name, $first_name, $email, $password);
+        $this->company = $company;
     }
 
+    public function __toString()
+    {
+        return parent::__toString() . (isset($this->company) ? " (employé chez " . $this->company . ")" : "");
+    }
+}
