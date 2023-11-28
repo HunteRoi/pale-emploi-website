@@ -63,7 +63,7 @@
                 </div>";
             }
         } catch (Exception $e) {
-            echo "<script language=\"Javascript\">document.location.replace(\"/?page=error&error=" . $e->getMessage() . "\");</script>";
+            redirect_to("/?page=error&error=" . $e->getMessage());
         }
         ?>
     </main>
