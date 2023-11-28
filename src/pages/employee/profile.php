@@ -111,4 +111,4 @@
         </p>
         <a class="btn btn-primary mt-3" href="#">Aide</a>
     </section>
-</main>
+</div>

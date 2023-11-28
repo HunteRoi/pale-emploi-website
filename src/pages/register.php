@@ -41,4 +41,4 @@
             <input type="submit" value="S'inscrire sur la plateforme">
         </form>
     </div>
-</main>
+</div>

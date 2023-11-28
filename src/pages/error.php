@@ -9,4 +9,4 @@
             Retourner à la <a href="/">page d'Accueil</a>
         </div>
     </div>
-</main>
+</div>

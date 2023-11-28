@@ -25,4 +25,4 @@
             <input type="submit" value="Se connecter sur la plateforme" />
         </form>
     </div>
-</main>
+</div>
