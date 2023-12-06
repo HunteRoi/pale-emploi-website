@@ -2,8 +2,8 @@
 
 namespace Database\Repositories;
 
-use Database\Connector;
 use Classes\PersonType;
+use Database\Connector;
 
 class PersonRepository
 {
@@ -33,10 +33,10 @@ class PersonRepository
         }
 
         [$lastname, $firstname, $password, $email, $company, $code] = $result;
-                
+
         return [$lastname, $firstname, $email, $password, $company, $code];
     }
-    
+
     public function getPersonType(string $email): ?PersonType
     {
         $statement = $this->connector->createStatement(
@@ -50,14 +50,14 @@ class PersonRepository
             return NULL;
         }
 
-        $result = $statement->fetch();
+        $result = $statement->get_result()->fetch_row();
         if (!isset($result)) {
             return NULL;
         }
 
         return isset($result[0]) ? PersonType::Employer : PersonType::Employee;
     }
-    
+
     public function login(string $email, string $password): ?PersonType
     {
         $statement = $this->connector->createStatement(
@@ -71,7 +71,7 @@ class PersonRepository
             return NULL;
         }
 
-        $result = $statement->fetch();
+        $result = $statement->get_result()->fetch_row();
         if (!isset($result)) {
             return NULL;
         }
