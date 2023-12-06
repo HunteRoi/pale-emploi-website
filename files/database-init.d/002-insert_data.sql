@@ -5,7 +5,8 @@ VALUES ('789000', '2023-01-01', '2023-01-01'),
        ('497815', '2023-01-01', NULL);
 
 INSERT INTO personne (nom, prenom, mot_de_passe, email, entreprise, code_parrainage)
-VALUES ('Duvillié', 'Guillerme', 'e10adc3949ba59abbe56e057f20f883e', 'guillerme.duvillie@henallux.be', 'Henallux', 1);
+VALUES ('flag3(S_8082O70ESS)', 'Guillerme', 'e10adc3949ba59abbe56e057f20f883e', 'guillerme.duvillie@henallux.be',
+        'Henallux', 1);
 -- mdp : 123456
 
 INSERT INTO offre_emploi (titre, description, ville, date_publication, employeur_id)
