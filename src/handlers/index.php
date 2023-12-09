@@ -8,7 +8,12 @@ use Database\Repositories\EmployerRepository;
 use Database\Repositories\PersonRepository;
 
 spl_autoload_register(function ($class) {
-    $path = str_replace("src/", "", str_replace("\\", "/", $class)) . ".php";
+    // as namespaces are case-sensitive, we need to make sure the path is correct. For
+    // example, if the namespace is "Classes", the path should be "{parent directory}/classes/Person.php"
+    $namespace = substr($class, 0, strrpos($class, '\\'));
+    $classname = substr($class, strrpos($class, '\\') + 1);
+
+    $path = __DIR__ . '/../' . strtolower(str_replace('\\', '/', $namespace)) . "/$classname.php";
 
     include_once($path);
 });

@@ -66,7 +66,7 @@
                 </div>";
         }
     } catch (Exception $e) {
-        redirect_to("/?page=error&error=" . $e->getMessage());
+        redirect_to("/?page=error&error=" . urlencode($e->getMessage()));
     }
     ?>
 </main>
