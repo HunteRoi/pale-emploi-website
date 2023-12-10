@@ -47,6 +47,32 @@ class Connector
         return $this->connection->query($query);
     }
 
+    public function multiQuery(string $query)
+    {
+        $success = $this->connection->multi_query($query);
+
+        if (!$success) {
+            return null;
+        }
+
+        $results = [];
+        do {
+            $store_result = $this->connection->store_result();
+
+            if ($store_result) {
+                $row = $store_result->fetch_row();
+
+                while ($row) {
+                    $results[] = $row;
+
+                    $row = $store_result->fetch_row();
+                }
+            }
+        } while ($this->connection->next_result());
+
+        return array_filter($results);
+    }
+
     public function close()
     {
         $this->connection->close();

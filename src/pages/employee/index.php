@@ -13,7 +13,7 @@
     </section>
 
     <section>
-        <h1 class="text-center">Offres d'emplois</h1>
+        <h1 class="text-center">Offres d'emploi</h1>
         <div class="d-flex flex-column flew-wrap align-content-center justify-content-between">
             <?php
             foreach ($offers as $offer) {

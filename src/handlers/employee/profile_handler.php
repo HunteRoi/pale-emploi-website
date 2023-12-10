@@ -2,11 +2,17 @@
 
 namespace Handlers\Employee;
 
-use function Handlers\is_logged_in;
+use Classes\PersonType;
 use Database\Repositories\EmployeeRepository;
+use function Handlers\is_logged_in;
 
 if (!is_logged_in()) {
     redirect_to("/");
+    exit();
+}
+
+if ($person_type === PersonType::Employer) {
+    redirect_to("/?page=employer/profile");
     exit();
 }
 

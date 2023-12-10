@@ -13,26 +13,11 @@ class SponsorCodeRepository
         $this->connector = Connector::getInstance();
     }
 
-    public function getByCode(string $code): ?int
+    public function getSponsorIdByCode(string $code): ?array
     {
-        $statement = $this->connector->createStatement(
-            "SELECT id FROM code_parrainage WHERE code = ? AND date_affiliation IS NULL;"
+        return $this->connector->multiQuery(
+            "SELECT id FROM code_parrainage WHERE date_affiliation IS NULL AND code = $code"
         );
-        $is_success = $statement->execute([$code]);
-
-        if (!$is_success) {
-            return NULL;
-        }
-
-
-        $rows = $statement->get_result()->fetch_row();
-        if (!isset($rows)) {
-            return NULL;
-        }
-
-        [$id] = $rows;
-
-        return $id;
     }
 
     public function updateAffiliationDate(int $id): bool

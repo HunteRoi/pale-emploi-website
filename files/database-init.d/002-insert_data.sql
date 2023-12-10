@@ -10,5 +10,4 @@ VALUES ('flag3(S_8082O70ESS)', 'Guillerme', 'e10adc3949ba59abbe56e057f20f883e', 
 -- mdp : 123456
 
 INSERT INTO offre_emploi (titre, description, ville, date_publication, employeur_id)
-VALUES ('Développeur C Namur', 'Je cherche un bon dev C pour m\'accompagner dans mes aventures', 'Namur', '2023-12-01',
-        1);
+VALUES ('Développeur C Namur', "Je cherche un bon dev C pour m'accompagner dans mes aventures", 'Namur', '2023-12-01', 1);

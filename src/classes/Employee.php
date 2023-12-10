@@ -6,9 +6,9 @@ class Employee extends Person
 {
     private string|null $company;
 
-    public function __construct($last_name, $first_name, $email, $password, $company)
+    public function __construct($id, $last_name, $first_name, $email, $password, $company)
     {
-        parent::__construct($last_name, $first_name, $email, $password);
+        parent::__construct($id, $last_name, $first_name, $email, $password);
         $this->company = $company;
     }
 

@@ -17,7 +17,7 @@ class PersonRepository
     public function getPerson(string $email): ?array
     {
         $statement = $this->connector->createStatement(
-            "SELECT nom, prenom, mot_de_passe, email, entreprise, code_parrainage
+            "SELECT id, nom, prenom, email, mot_de_passe, entreprise, code_parrainage
             FROM personne
             WHERE email = ?;"
         );
@@ -32,9 +32,7 @@ class PersonRepository
             return NULL;
         }
 
-        [$lastname, $firstname, $password, $email, $company, $code] = $result;
-
-        return [$lastname, $firstname, $email, $password, $company, $code];
+        return $result;
     }
 
     public function getPersonType(string $email): ?PersonType

@@ -8,13 +8,15 @@
         <form method="post">
             <fieldset>
                 <legend>Informations de connexion</legend>
-                <div>
-                    <label for="email">Adresse email :</label>
-                    <input type="email" name="email" id="email" <?php echo isset($_POST["email"]) ? "value=\"{$_POST['email']}\"" : "" ?> required />
+                <div class="input-group mb-3 flex-nowrap">
+                    <label class="input-group-text" for="email">Adresse email</label>
+                    <input class="form-control" type="email" name="email"
+                           id="email" <?php echo isset($_POST["email"]) ? "value=\"{$_POST['email']}\"" : "" ?>
+                           required/>
                 </div>
-                <div>
-                    <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password" required />
+                <div class="input-group mb-3 flex-nowrap">
+                    <label class="input-group-text" for="password">Mot de passe</label>
+                    <input class="form-control" type="password" name="password" id="password" required/>
                 </div>
             </fieldset>
             <div class="error">
@@ -22,7 +24,7 @@
                     <?php echo $error; ?>
                 </p>
             </div>
-            <input type="submit" value="Se connecter sur la plateforme" />
+            <input class="btn btn-primary" type="submit" value="Se connecter sur la plateforme"/>
         </form>
     </div>
 </div>

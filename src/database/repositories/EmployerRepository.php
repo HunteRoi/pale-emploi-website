@@ -10,7 +10,7 @@ class EmployerRepository extends PersonRepository
     {
         parent::__construct();
     }
-    
+
     public function get(string $email): ?Employer
     {
         $result = parent::getPerson($email);
@@ -19,8 +19,8 @@ class EmployerRepository extends PersonRepository
             return NULL;
         }
 
-        [$lastname, $firstname, $password, $email, $company, $code] = $result;
+        [$id, $lastname, $firstname, $email, $password, $company, $code] = $result;
 
-        return new Employer($lastname, $firstname, $email, $password, $company, $code);
+        return new Employer($id, $lastname, $firstname, $email, $password, $company, $code);
     }
 }

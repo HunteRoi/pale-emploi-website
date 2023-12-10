@@ -9,28 +9,34 @@
         <form method="post">
             <fieldset>
                 <legend>Informations personnelles</legend>
-                <div>
-                    <label for="last_name">Nom de famille :</label>
-                    <input type="text" name="last_name" id="last_name" <?php echo isset($_POST["last_name"]) ? "value=\"{$_POST['last_name']}\"" : "" ?> required>
+                <div class="input-group mb-3 flex-nowrap">
+                    <label class="input-group-text" for="last_name">Nom de famille</label>
+                    <input class="form-control" type="text" name="last_name"
+                           id="last_name" <?php echo isset($_POST["last_name"]) ? "value=\"{$_POST['last_name']}\"" : "" ?>
+                           required>
                 </div>
-                <div>
-                    <label for="first_name">Prénom :</label>
-                    <input type="text" name="first_name" id="first_name" <?php echo isset($_POST["first_name"]) ? "value=\"{$_POST['first_name']}\"" : "" ?> required>
+                <div class="input-group mb-3 flex-nowrap">
+                    <label class="input-group-text" for="first_name">Prénom</label>
+                    <input class="form-control" type="text" name="first_name"
+                           id="first_name" <?php echo isset($_POST["first_name"]) ? "value=\"{$_POST['first_name']}\"" : "" ?>
+                           required>
                 </div>
             </fieldset>
             <fieldset>
                 <legend>Informations de connexion</legend>
-                <div>
-                    <label for="email">Adresse email :</label>
-                    <input type="email" name="email" id="email" <?php echo isset($_POST["email"]) ? "value=\"{$_POST['email']}\"" : "" ?> required>
+                <div class="input-group mb-3 flex-nowrap">
+                    <label class="input-group-text" for="email">Adresse email</label>
+                    <input class="form-control" type="email" name="email"
+                           id="email" <?php echo isset($_POST["email"]) ? "value=\"{$_POST['email']}\"" : "" ?>
+                           required>
                 </div>
-                <div>
-                    <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password" required>
+                <div class="input-group mb-3 flex-nowrap">
+                    <label class="input-group-text" for="password">Mot de passe</label>
+                    <input class="form-control" type="password" name="password" id="password" required>
                 </div>
-                <div>
-                    <label for="confirm_password">Confirmation du mot de passe</label>
-                    <input type="password" name="confirm_password" id="confirm_password" required>
+                <div class="input-group mb-3 flex-nowrap">
+                    <label class="input-group-text" for="confirm_password">Confirmation du mot de passe</label>
+                    <input class="form-control" type="password" name="confirm_password" id="confirm_password" required>
                 </div>
             </fieldset>
             <div class="error">
@@ -38,7 +44,7 @@
                     <?php echo $error; ?>
                 </p>
             </div>
-            <input type="submit" value="S'inscrire sur la plateforme">
+            <input class="btn btn-primary" type="submit" value="S'inscrire sur la plateforme">
         </form>
     </div>
 </div>
