@@ -17,7 +17,7 @@
                     <input class="form-control" type="text" name="company_name" id="company_name" required/>
                 </div>
             </fieldset>
-            <?php if (isset($error))): ?>
+            <?php if (isset($error)): ?>
                 <div class="alert alert-danger" role="alert">
                     <p>
                         <?php echo $error; ?>

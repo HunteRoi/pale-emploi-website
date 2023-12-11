@@ -19,7 +19,7 @@
                     <input class="form-control" type="password" name="password" id="password" required/>
                 </div>
             </fieldset>
-            <?php if (isset($error))): ?>
+            <?php if (isset($error)): ?>
                 <div class="alert alert-danger" role="alert">
                     <p>
                         <?php echo $error; ?>

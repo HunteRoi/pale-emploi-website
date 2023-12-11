@@ -24,7 +24,7 @@
                 <input class="form-control" type="file" name="file" id="file" required/>
             </div>
         </div>
-        <?php if (isset($error))): ?>
+        <?php if (isset($error)): ?>
                 <div class="alert alert-danger" role="alert">
                     <p>
                         <?php echo $error; ?>
