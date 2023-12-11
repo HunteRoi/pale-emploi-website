@@ -9,7 +9,7 @@ if (!is_logged_in()) {
     exit();
 }
 
-$error = '';
+$error = null;
 
 function handle_form(string $title, string $description, string $city, array $files): string
 {

@@ -11,7 +11,7 @@ if (!is_logged_in()) {
     exit();
 }
 
-$error = '';
+$error = null;
 
 function handle_form(string $sponsor_code, string $company_name): string
 {
