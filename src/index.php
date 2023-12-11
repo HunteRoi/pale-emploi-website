@@ -73,7 +73,7 @@
                         <p>Si vous avez déjà un compte, <a href=\"/?page=login\">connectez-vous</a>.</p>
                         <p>Si vous n'avez pas de compte, <a href=\"/?page=register\">inscrivez-vous</a>.</p>
                     </div>
-                    <img src=\"/assets/img/logo.jpg\" alt=\"logo\" width=\"300\" />
+                    <img src=\"/assets/img/logo.jpg\" alt=\"steghide\" width=\"300\" />
                 </div>";
         }
     } catch (Exception $e) {
@@ -89,7 +89,7 @@
         echo <<<HTML
 <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
-        <img src="/assets/img/logo.jpg" class="rounded me-2" alt="Logo" width="32" height="32">
+        <img src="/assets/img/logo.jpg" class="rounded me-2" alt="steghide" width="32" height="32">
         <strong class="me-auto">Message du système</strong>
         <small>Maintenant</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fermer la pop-up"></button>
