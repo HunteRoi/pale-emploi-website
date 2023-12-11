@@ -17,7 +17,7 @@
                     <input class="form-control" type="text" name="company_name" id="company_name" required/>
                 </div>
             </fieldset>
-            <div class="error">
+            <div class="alert alert-danger" role="alert">
                 <p>
                     <?php echo $error; ?>
                 </p>
@@ -27,11 +27,9 @@
     </div>
     <script>
         document.getElementById("sponsor_code").addEventListener("input", function (e) {
-            if (e.target.value.trim() === "") {
-                e.target.setCustomValidity("Le code de parrainage doit être composé de 6 chiffres!");
-            } else {
-                e.target.setCustomValidity("");
-            }
+            e.target.setCustomValidity(
+                e.target.value.trim() === "" ? "Le code de parrainage doit être composé de 6 chiffres!" : ""
+            )
         });
     </script>
 </div>
