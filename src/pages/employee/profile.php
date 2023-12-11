@@ -57,7 +57,7 @@
                         </div>
                         <div class="css-4rov4i eu4oa1w0"><span class=" css-smaipe e1wnkr790"><span
                                         class="css-34k6dz e1wnkr790"><span sr-only="true"
-                                                                           class="css-8u2krs esbq1260">cv_prenom_nom.pdf</span></span></span><span
+                                                                           class="css-8u2krs esbq1260"><?php echo "cv_". $employee . "pdf"?></span></span></span><span
                                     class="css-nab397 e1wnkr790">Ajouté le Jul 8, 2021</span></div>
                     </div>
                     <div class="css-x02f3 eu4oa1w0"><input aria-label="Upload Resume" data-testid="file-upload-input"
