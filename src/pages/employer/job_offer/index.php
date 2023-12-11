@@ -15,7 +15,9 @@
         <p class="text-center">Publié par <?php echo $offer->employer ?>
             le <?php echo $offer->getPublicationDate() ?></p>
 
-        <a class="btn btn-primary" href="<?php echo $offer->filepath ?>" target="_blank">Consulter</a>
+        <?php if (isset($offer->filepath)): ?>
+            <a class="btn btn-primary" href="<?php echo $offer->filepath ?>" target="_blank">Consulter</a>
+        <?php endif; ?>
     <?php else: ?>
         <?php if (isset($offers)): ?>
             <section>
