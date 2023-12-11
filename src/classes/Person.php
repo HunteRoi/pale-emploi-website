@@ -23,6 +23,6 @@ class Person
 
     public function __toString()
     {
-        return $this->first_name . ' ' . mb_strtoupper($this->last_name)[0] . '.';
+        return $this->first_name . ' ' . strtoupper($this->last_name)[0] . '.';
     }
 }
