@@ -24,11 +24,13 @@
                 <input class="form-control" type="file" name="file" id="file" required/>
             </div>
         </div>
-        <div class="alert alert-danger" role="alert">
-            <p>
-                <?php echo $error; ?>
-            </p>
-        </div>
+        <?php if (isset($error))): ?>
+                <div class="alert alert-danger" role="alert">
+                    <p>
+                        <?php echo $error; ?>
+                    </p>
+                </div>
+            <?php endif; ?>
         <input class="btn btn-primary" type="submit" value="Uploader" id="submit-button"/>
     </form>
 

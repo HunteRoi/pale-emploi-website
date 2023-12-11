@@ -17,11 +17,13 @@
                     <input class="form-control" type="text" name="company_name" id="company_name" required/>
                 </div>
             </fieldset>
-            <div class="alert alert-danger" role="alert">
-                <p>
-                    <?php echo $error; ?>
-                </p>
-            </div>
+            <?php if (isset($error))): ?>
+                <div class="alert alert-danger" role="alert">
+                    <p>
+                        <?php echo $error; ?>
+                    </p>
+                </div>
+            <?php endif; ?>
             <input type="submit" value="S'enregistrer comme employeur" class="btn btn-primary"/>
         </form>
     </div>

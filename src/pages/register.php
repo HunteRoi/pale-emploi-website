@@ -39,11 +39,13 @@
                     <input class="form-control" type="password" name="confirm_password" id="confirm_password" required>
                 </div>
             </fieldset>
-            <div class="alert alert-danger" role="alert">
-                <p>
-                    <?php echo $error; ?>
-                </p>
-            </div>
+            <?php if (isset($error))): ?>
+                <div class="alert alert-danger" role="alert">
+                    <p>
+                        <?php echo $error; ?>
+                    </p>
+                </div>
+            <?php endif; ?>
             <input class="btn btn-primary" type="submit" value="S'inscrire sur la plateforme">
         </form>
     </div>

@@ -19,11 +19,13 @@
                     <input class="form-control" type="password" name="password" id="password" required/>
                 </div>
             </fieldset>
-            <div class="alert alert-danger" role="alert">
-                <p>
-                    <?php echo $error; ?>
-                </p>
-            </div>
+            <?php if (isset($error))): ?>
+                <div class="alert alert-danger" role="alert">
+                    <p>
+                        <?php echo $error; ?>
+                    </p>
+                </div>
+            <?php endif; ?>
             <input class="btn btn-primary" type="submit" value="Se connecter sur la plateforme"/>
         </form>
     </div>
