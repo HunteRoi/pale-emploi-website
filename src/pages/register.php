@@ -39,7 +39,7 @@
                     <input class="form-control" type="password" name="confirm_password" id="confirm_password" required>
                 </div>
             </fieldset>
-            <div class="error">
+            <div class="alert alert-danger" role="alert">
                 <p>
                     <?php echo $error; ?>
                 </p>
